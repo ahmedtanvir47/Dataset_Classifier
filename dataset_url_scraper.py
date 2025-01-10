@@ -13,9 +13,9 @@ if __name__ == "__main__":
     urls=[]
     
     for page_no in tqdm(range(1,501)):
-        page_url= f"https://www.kaggle.com/datasets?sort=votes&page={page_no}"
+        page_url= f"https://www.kaggle.com/datasets?sort=usability&page={page_no}"
         driver.get(page_url)
-        time.sleep(3)
+        time.sleep(2)
         try:
             # Locate all potential list items
             list_items = driver.find_elements(By.CLASS_NAME, "MuiListItem-root")
